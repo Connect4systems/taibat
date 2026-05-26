@@ -1,0 +1,33 @@
+{% extends "templates/web.html" %}
+
+{% block title %}عن النظام - نظام الطيبات{% endblock %}
+
+{% block page_content %}
+<div class="taibat-wrap">
+	{% include "templates/includes/taibat_header.html" %}
+	<main class="taibat-page-content">
+		<section class="taibat-page-hero">
+			<div class="taibat-shell">
+				<div class="taibat-panel">
+					<span class="taibat-kicker">عن نظام الطيبات</span>
+					<h1 class="taibat-title">موقع عام للتثقيف الغذائي بأسلوب عربي واضح</h1>
+					<p class="taibat-lead">الهدف من الموقع هو تقديم محتوى منظّم للزوار حول الأسس الغذائية التي يقوم عليها نظام الطيبات، مع سهولة الوصول للصفحات الأساسية والبدء العملي.</p>
+				</div>
+			</div>
+		</section>
+		<section class="taibat-section">
+			<div class="taibat-shell taibat-columns">
+				<div class="taibat-card">
+					<h3>رؤية الموقع</h3>
+					<p>أن يكون مرجعًا عربيًا مبسطًا ومتاحًا للجمهور لفهم النظام وتطبيقه تدريجيًا في الحياة اليومية.</p>
+				</div>
+				<div class="taibat-card">
+					<h3>محتوى موثّق من الكتاب</h3>
+					<p>تم بناء الأقسام الرئيسية استنادًا إلى بنية الكتاب: الفلسفة، المسموحات، الممنوعات، النظريات، والتطبيق العملي.</p>
+				</div>
+			</div>
+		</section>
+	</main>
+	{% include "templates/includes/taibat_footer.html" %}
+</div>
+{% endblock %}

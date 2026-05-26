@@ -1,0 +1,31 @@
+{% extends "templates/web.html" %}
+
+{% block title %}الجدول الأسبوعي - نظام الطيبات{% endblock %}
+
+{% block page_content %}
+<div class="taibat-wrap">
+	{% include "templates/includes/taibat_header.html" %}
+	<main class="taibat-page-content">
+		<section class="taibat-page-hero">
+			<div class="taibat-shell">
+				<div class="taibat-panel">
+					<span class="taibat-kicker">التطبيق العملي</span>
+					<h1 class="taibat-title">نموذج جدول أسبوعي للبدء</h1>
+					<p class="taibat-lead">قالب مبسط يساعد الزائر على بدء التطبيق، ويمكن تعديله حسب الاحتياج اليومي والحالة الصحية.</p>
+				</div>
+			</div>
+		</section>
+		<section class="taibat-section">
+			<div class="taibat-shell taibat-grid">
+				<div class="taibat-card"><h3>السبت</h3><p>بداية متوازنة: نشويات طبيعية + بروتين مناسب + مشروب طبيعي.</p></div>
+				<div class="taibat-card"><h3>الأحد</h3><p>تنويع مصدر البروتين مع الحفاظ على القواعد الذهبية في الكمية والتكرار.</p></div>
+				<div class="taibat-card"><h3>الاثنين</h3><p>يوم انضباط عالٍ والابتعاد الكامل عن أي مدخلات صناعية.</p></div>
+				<div class="taibat-card"><h3>الثلاثاء</h3><p>التركيز على المسموحات الأساسية وتثبيت توقيت الوجبات.</p></div>
+				<div class="taibat-card"><h3>الأربعاء</h3><p>تعديل الكميات وفق النشاط مع الالتزام بالمشروبات المسموحة.</p></div>
+				<div class="taibat-card"><h3>الخميس والجمعة</h3><p>مراجعة الأسبوع وتجهيز خطة الأسبوع التالي بشكل واقعي.</p></div>
+			</div>
+		</section>
+	</main>
+	{% include "templates/includes/taibat_footer.html" %}
+</div>
+{% endblock %}

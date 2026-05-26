@@ -1,0 +1,386 @@
+:root {
+	--bg: #f6f4ef;
+	--paper: #fffdf8;
+	--text: #1f2d16;
+	--muted: #5f6f51;
+	--brand: #2f6b2f;
+	--brand-strong: #19471d;
+	--accent: #d99f45;
+	--line: #d8ddcf;
+	--radius-lg: 24px;
+	--radius-md: 14px;
+	--shadow-soft: 0 16px 35px rgba(16, 37, 16, 0.08);
+	--shadow-card: 0 12px 24px rgba(18, 28, 18, 0.06);
+}
+
+html,
+body {
+	direction: rtl;
+	font-family: "Tajawal", "Segoe UI", sans-serif;
+	color: var(--text);
+	background: radial-gradient(circle at 90% 10%, #f4e8cf 0%, transparent 33%),
+		radial-gradient(circle at 12% 85%, #dbeacd 0%, transparent 30%),
+		var(--bg);
+	scroll-behavior: smooth;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.taibat-wrap {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.taibat-shell {
+	width: min(1150px, 94vw);
+	margin: 0 auto;
+}
+
+.taibat-topbar {
+	position: sticky;
+	top: 0;
+	z-index: 12;
+	backdrop-filter: blur(8px);
+	background: rgba(246, 244, 239, 0.86);
+	border-bottom: 1px solid rgba(86, 105, 79, 0.18);
+}
+
+.taibat-nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 14px 0;
+	gap: 20px;
+}
+
+.taibat-brand {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-weight: 700;
+	font-size: 1.02rem;
+	white-space: nowrap;
+}
+
+.taibat-brand-badge {
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	background: linear-gradient(160deg, var(--brand) 0%, #538a35 100%);
+	display: grid;
+	place-items: center;
+	color: #fff;
+	font-size: 1.1rem;
+}
+
+.taibat-links {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
+
+.taibat-links a {
+	padding: 9px 13px;
+	border-radius: 999px;
+	font-weight: 600;
+	font-size: 0.92rem;
+	color: #2d4324;
+	transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.taibat-links a:hover,
+.taibat-links a.active {
+	background: #ecf2e5;
+	color: var(--brand-strong);
+	transform: translateY(-1px);
+}
+
+.taibat-hero {
+	padding: 72px 0 46px;
+}
+
+.taibat-hero-grid {
+	display: grid;
+	grid-template-columns: 1.2fr 1fr;
+	gap: 24px;
+	align-items: stretch;
+}
+
+.taibat-photo-card {
+	display: grid;
+	place-items: center;
+	overflow: hidden;
+	padding: 0;
+	min-height: 280px;
+}
+
+.taibat-photo {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.taibat-panel {
+	background: var(--paper);
+	border: 1px solid var(--line);
+	border-radius: var(--radius-lg);
+	box-shadow: var(--shadow-soft);
+	padding: 34px;
+}
+
+.taibat-kicker {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 8px 14px;
+	background: #eef5e7;
+	border: 1px solid #dcead0;
+	border-radius: 999px;
+	font-size: 0.84rem;
+	font-weight: 700;
+	color: #325025;
+	margin-bottom: 16px;
+}
+
+.taibat-title {
+	font-size: clamp(1.9rem, 3vw, 2.9rem);
+	line-height: 1.3;
+	margin: 0 0 12px;
+}
+
+.taibat-lead {
+	line-height: 1.9;
+	font-size: 1.03rem;
+	color: #42543a;
+	margin: 0;
+}
+
+.taibat-actions {
+	display: flex;
+	gap: 12px;
+	margin-top: 26px;
+	flex-wrap: wrap;
+}
+
+.taibat-btn {
+	padding: 12px 20px;
+	border-radius: 999px;
+	font-weight: 700;
+	font-size: 0.95rem;
+	border: 1px solid transparent;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.taibat-btn:hover {
+	transform: translateY(-1px);
+}
+
+.taibat-btn.primary {
+	background: linear-gradient(135deg, var(--brand-strong), #33652f);
+	color: #fff;
+	box-shadow: 0 10px 24px rgba(36, 70, 30, 0.3);
+}
+
+.taibat-btn.ghost {
+	border-color: #c9d7be;
+	background: #f8fcf4;
+	color: #27471f;
+}
+
+.taibat-hero-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	gap: 12px;
+}
+
+.taibat-hero-list li {
+	padding: 13px 14px;
+	border-radius: var(--radius-md);
+	background: #f7fbf3;
+	border: 1px solid #e1ebd7;
+	font-weight: 600;
+	color: #33462a;
+}
+
+.taibat-section {
+	padding: 18px 0 56px;
+}
+
+.taibat-banner {
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	padding: 0;
+	overflow: hidden;
+	min-height: 210px;
+}
+
+.taibat-banner-overlay {
+	background: linear-gradient(95deg, rgba(12, 32, 14, 0.8), rgba(40, 73, 33, 0.52));
+	padding: 32px;
+	height: 100%;
+	color: #f3faeb;
+}
+
+.taibat-banner-overlay .taibat-lead {
+	color: #dde9d5;
+}
+
+.taibat-section-title {
+	font-size: clamp(1.4rem, 2vw, 2rem);
+	margin: 0 0 16px;
+}
+
+.taibat-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 18px;
+}
+
+.taibat-card {
+	background: #fff;
+	border: 1px solid #dce3d3;
+	border-radius: 18px;
+	padding: 22px;
+	box-shadow: var(--shadow-card);
+}
+
+.taibat-card h3 {
+	margin-top: 0;
+	margin-bottom: 8px;
+	font-size: 1.1rem;
+}
+
+.taibat-card p {
+	margin: 0;
+	line-height: 1.8;
+	color: #53634b;
+}
+
+.taibat-newsletter {
+	background: linear-gradient(140deg, #18381d 0%, #29562c 60%, #3d6f3c 100%);
+	color: #f8ffef;
+	border-radius: var(--radius-lg);
+	padding: 34px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+	align-items: center;
+}
+
+.taibat-newsletter p {
+	margin: 0;
+	line-height: 1.9;
+	color: #dce8cf;
+}
+
+.taibat-newsletter-form {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.taibat-newsletter-form input {
+	width: 100%;
+	padding: 13px 14px;
+	border-radius: 10px;
+	border: 1px solid rgba(234, 247, 227, 0.3);
+	background: rgba(250, 255, 246, 0.08);
+	color: #f6ffea;
+}
+
+.taibat-newsletter-form input::placeholder {
+	color: #c6d6ba;
+}
+
+.taibat-newsletter-form button {
+	padding: 12px 16px;
+	border: 0;
+	border-radius: 12px;
+	font-weight: 700;
+	background: linear-gradient(135deg, #e0be83, #be8a3c);
+	color: #2d220f;
+	cursor: pointer;
+}
+
+.taibat-note {
+	font-size: 0.86rem;
+	color: #def0d2;
+}
+
+.taibat-footer {
+	margin-top: auto;
+	padding: 28px 0 36px;
+	color: #506248;
+	font-size: 0.94rem;
+}
+
+.taibat-footer .meta {
+	display: flex;
+	justify-content: space-between;
+	gap: 14px;
+	flex-wrap: wrap;
+	border-top: 1px solid #d6dfcd;
+	padding-top: 18px;
+}
+
+.taibat-page-hero {
+	padding: 52px 0 30px;
+}
+
+.taibat-page-hero .taibat-panel {
+	padding: 28px;
+}
+
+.taibat-page-content {
+	padding-bottom: 52px;
+}
+
+.taibat-columns {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 16px;
+}
+
+@media (max-width: 1020px) {
+	.taibat-hero-grid,
+	.taibat-newsletter,
+	.taibat-columns {
+		grid-template-columns: 1fr;
+	}
+
+	.taibat-hero {
+		padding-top: 40px;
+	}
+}
+
+@media (max-width: 760px) {
+	.taibat-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.taibat-panel,
+	.taibat-newsletter {
+		padding: 22px;
+	}
+
+	.taibat-links {
+		justify-content: flex-start;
+	}
+}

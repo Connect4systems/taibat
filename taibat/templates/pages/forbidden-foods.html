@@ -1,0 +1,31 @@
+{% extends "templates/web.html" %}
+
+{% block title %}الأطعمة الممنوعة - نظام الطيبات{% endblock %}
+
+{% block page_content %}
+<div class="taibat-wrap">
+	{% include "templates/includes/taibat_header.html" %}
+	<main class="taibat-page-content">
+		<section class="taibat-page-hero">
+			<div class="taibat-shell">
+				<div class="taibat-panel">
+					<span class="taibat-kicker">الباب الثالث</span>
+					<h1 class="taibat-title">الأطعمة الممنوعة وبدائلها</h1>
+					<p class="taibat-lead">الأصناف الممنوعة ليست تضييقًا، بل تقليل لعوامل الإجهاد الغذائي والهضمي والهرموني، مع بدائل متاحة.</p>
+				</div>
+			</div>
+		</section>
+		<section class="taibat-section">
+			<div class="taibat-shell taibat-grid">
+				<div class="taibat-card"><h3>الدواجن والبيض الصناعي</h3><p>بدائل مقترحة: بعض اللحوم الطبيعية والأسماك المسموحة.</p></div>
+				<div class="taibat-card"><h3>الألبان والأجبان غير المناسبة</h3><p>التركيز على الأنواع المسموحة المحددة بدل الخيارات الصناعية الشائعة.</p></div>
+				<div class="taibat-card"><h3>الدقيق والمخبوزات الحديثة</h3><p>تقليل الدقيق الأبيض والمخبوزات المحسنة كيميائيًا.</p></div>
+				<div class="taibat-card"><h3>النشويات المصنعة</h3><p>إيقاف الحلويات والمخبوزات المصنعة عالية السكر والدهون الرديئة.</p></div>
+				<div class="taibat-card"><h3>المشروبات الصناعية</h3><p>استبدالها بالماء والمشروبات الطبيعية الدافئة المسموحة.</p></div>
+				<div class="taibat-card"><h3>المواد الصناعية والمكملات العشوائية</h3><p>الابتعاد عن المنتجات غير الضرورية إلا بإشراف طبي متخصص.</p></div>
+			</div>
+		</section>
+	</main>
+	{% include "templates/includes/taibat_footer.html" %}
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "templates/web.html" %}
+
+{% block title %}الأسئلة الشائعة - نظام الطيبات{% endblock %}
+
+{% block page_content %}
+<div class="taibat-wrap">
+	{% include "templates/includes/taibat_header.html" %}
+	<main class="taibat-page-content">
+		<section class="taibat-page-hero">
+			<div class="taibat-shell">
+				<div class="taibat-panel">
+					<span class="taibat-kicker">الأسئلة الشائعة</span>
+					<h1 class="taibat-title">أهم الأسئلة قبل البدء في النظام</h1>
+					<p class="taibat-lead">إجابات مختصرة تساعد الزائر على التطبيق بثقة وواقعية ضمن الحياة اليومية.</p>
+				</div>
+			</div>
+		</section>
+		<section class="taibat-section">
+			<div class="taibat-shell taibat-grid">
+				<div class="taibat-card"><h3>هل النظام مناسب للجمهور العام؟</h3><p>نعم كمحتوى توعوي غذائي، مع تخصيص التطبيق وفق كل حالة.</p></div>
+				<div class="taibat-card"><h3>ماذا أفعل عند الدعوات؟</h3><p>اختر المتاح الأقرب للمسموح وابتعد عن الممنوعات دون تعقيد.</p></div>
+				<div class="taibat-card"><h3>هل يطبق مع الأمراض المزمنة؟</h3><p>يكون ذلك تحت متابعة الطبيب المعالج وعدم إيقاف أي علاج دون إشراف.</p></div>
+				<div class="taibat-card"><h3>كيف أبدأ بسرعة؟</h3><p>ابدأ من صفحة المسموحات، ثم طبق نموذج الأسبوع الأول تدريجيًا.</p></div>
+			</div>
+		</section>
+	</main>
+	{% include "templates/includes/taibat_footer.html" %}
+</div>
+{% endblock %}

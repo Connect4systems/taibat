@@ -1,0 +1,39 @@
+{% extends "templates/web.html" %}
+
+{% block title %}تواصل معنا - نظام الطيبات{% endblock %}
+
+{% block page_content %}
+<div class="taibat-wrap">
+	{% include "templates/includes/taibat_header.html" %}
+	<main class="taibat-page-content">
+		<section class="taibat-page-hero">
+			<div class="taibat-shell">
+				<div class="taibat-panel">
+					<span class="taibat-kicker">تواصل معنا</span>
+					<h1 class="taibat-title">يسعدنا استقبال رسائلكم واستفساراتكم</h1>
+					<p class="taibat-lead">للاستفسارات العامة أو مقترحات تطوير الموقع، يمكنكم مراسلتنا عبر النموذج التالي.</p>
+				</div>
+			</div>
+		</section>
+		<section class="taibat-section">
+			<div class="taibat-shell taibat-columns">
+				<div class="taibat-card">
+					<h3>نموذج التواصل</h3>
+					<form class="taibat-newsletter-form" action="#" method="post">
+						<input type="text" name="name" placeholder="الاسم" required>
+						<input type="email" name="email" placeholder="البريد الإلكتروني" required>
+						<input type="text" name="subject" placeholder="عنوان الرسالة" required>
+						<input type="text" name="message" placeholder="نص الرسالة" required>
+						<button type="submit">إرسال</button>
+					</form>
+				</div>
+				<div class="taibat-card">
+					<h3>روابط مهمة</h3>
+					<p>الرئيسية، المسموحات، الممنوعات، النظريات، الجدول الأسبوعي، والاشتراك بالنشرة البريدية.</p>
+				</div>
+			</div>
+		</section>
+	</main>
+	{% include "templates/includes/taibat_footer.html" %}
+</div>
+{% endblock %}

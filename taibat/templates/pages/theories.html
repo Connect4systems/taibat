@@ -1,0 +1,30 @@
+{% extends "templates/web.html" %}
+
+{% block title %}النظريات العلمية - نظام الطيبات{% endblock %}
+
+{% block page_content %}
+<div class="taibat-wrap">
+	{% include "templates/includes/taibat_header.html" %}
+	<main class="taibat-page-content">
+		<section class="taibat-page-hero">
+			<div class="taibat-shell">
+				<div class="taibat-panel">
+					<span class="taibat-kicker">الباب الرابع</span>
+					<h1 class="taibat-title">أهم النظريات العلمية في النظام</h1>
+					<p class="taibat-lead">ملخص نظريات محورية تساعد على فهم العلاقة بين الغذاء ووظائف الجسم والبيئة الداخلية للخلايا.</p>
+				</div>
+			</div>
+		</section>
+		<section class="taibat-section">
+			<div class="taibat-shell taibat-grid">
+				<div class="taibat-card"><h3>نظرية الدهون</h3><p>فهم دور الدهون الحيوي وأن الجسم يعتمد على مدخلات سليمة للتوازن.</p></div>
+				<div class="taibat-card"><h3>نظرية الميتوكوندريا</h3><p>الميتوكوندريا كمصنع الطاقة داخل الخلية وتأثير جودة الغذاء عليها.</p></div>
+				<div class="taibat-card"><h3>نظرية الجسم السيد</h3><p>تعزيز قدرة الجسم على التنظيم الذاتي عند خفض المداخل المجهدة.</p></div>
+				<div class="taibat-card"><h3>نظرية القولون وعرق النسا</h3><p>الترابط بين الجهاز الهضمي والالتهاب والألم العصبي الحركي.</p></div>
+				<div class="taibat-card"><h3>نظرية نشأة السرطان</h3><p>التركيز على بيئة الخلية والالتهاب المزمن وتراكم السموم كعوامل مؤثرة.</p></div>
+			</div>
+		</section>
+	</main>
+	{% include "templates/includes/taibat_footer.html" %}
+</div>
+{% endblock %}

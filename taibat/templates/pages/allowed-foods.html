@@ -1,0 +1,31 @@
+{% extends "templates/web.html" %}
+
+{% block title %}الأطعمة المسموحة - نظام الطيبات{% endblock %}
+
+{% block page_content %}
+<div class="taibat-wrap">
+	{% include "templates/includes/taibat_header.html" %}
+	<main class="taibat-page-content">
+		<section class="taibat-page-hero">
+			<div class="taibat-shell">
+				<div class="taibat-panel">
+					<span class="taibat-kicker">الباب الثاني</span>
+					<h1 class="taibat-title">الأطعمة المسموحة في نظام الطيبات</h1>
+					<p class="taibat-lead">ملخص الفئات المسموحة الواردة في الكتاب، مع التركيز على البدائل الطبيعية السهلة التطبيق.</p>
+				</div>
+			</div>
+		</section>
+		<section class="taibat-section">
+			<div class="taibat-shell taibat-grid">
+				<div class="taibat-card"><h3>الأساسيات والبهارات</h3><p>مثل الأرز الأبيض المصري، زيت الزيتون، الزبدة الطبيعية، والبهارات الطبيعية.</p></div>
+				<div class="taibat-card"><h3>النشويات والحبوب</h3><p>مثل البطاطا والبطاطس والحبوب الطبيعية ضمن التكرار المناسب.</p></div>
+				<div class="taibat-card"><h3>الفواكه</h3><p>اختيار الفواكه وفق الموسم والحالة، مع مراعاة الكمية وطريقة التناول.</p></div>
+				<div class="taibat-card"><h3>اللحوم والبروتينات</h3><p>التركيز على مصادر بروتين طبيعية أقل تصنيعا وأكثر جودة.</p></div>
+				<div class="taibat-card"><h3>العسل والزيوت الطبيعية</h3><p>العسل الطبيعي، والخل الطبيعي، والزيوت المضغوطة على البارد.</p></div>
+				<div class="taibat-card"><h3>الأجبان والحلويات الطبيعية</h3><p>الأنواع المسموحة المحددة والبدائل الطبيعية بدل المنتجات الصناعية.</p></div>
+			</div>
+		</section>
+	</main>
+	{% include "templates/includes/taibat_footer.html" %}
+</div>
+{% endblock %}

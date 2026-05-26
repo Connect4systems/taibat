@@ -1,0 +1,28 @@
+{% extends "templates/web.html" %}
+
+{% block title %}فلسفة النظام - نظام الطيبات{% endblock %}
+
+{% block page_content %}
+<div class="taibat-wrap">
+	{% include "templates/includes/taibat_header.html" %}
+	<main class="taibat-page-content">
+		<section class="taibat-page-hero">
+			<div class="taibat-shell">
+				<div class="taibat-panel">
+					<span class="taibat-kicker">الباب الأول</span>
+					<h1 class="taibat-title">فلسفة النظام: الجسم مصنع وليس مستخلص</h1>
+					<p class="taibat-lead">يقوم النظام على احترام فطرة الجسم وقدرته على التصنيع الحيوي عند توفير المدخلات الطبيعية النظيفة والابتعاد عن المداخل الصناعية المجهدة.</p>
+				</div>
+			</div>
+		</section>
+		<section class="taibat-section">
+			<div class="taibat-shell taibat-grid">
+				<div class="taibat-card"><h3>نظرية الجسم السيد</h3><p>الجسم يملك آليات تنظيم وإصلاح ذاتي عند تهيئة البيئة المناسبة له.</p></div>
+				<div class="taibat-card"><h3>القواعد الذهبية</h3><p>تنظيم الشهية، تقليل الإجهاد الغذائي، واحترام توقيت وكمية الطعام.</p></div>
+				<div class="taibat-card"><h3>مؤشر التكرار</h3><p>ليس المهم نوع الطعام فقط، بل عدد مرات التناول وتكرار الصنف.</p></div>
+			</div>
+		</section>
+	</main>
+	{% include "templates/includes/taibat_footer.html" %}
+</div>
+{% endblock %}

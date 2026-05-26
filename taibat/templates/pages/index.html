@@ -1,0 +1,102 @@
+{% extends "templates/web.html" %}
+
+{% block title %}نظام الطيبات - الصفحة الرئيسية{% endblock %}
+
+{% block page_content %}
+<div class="taibat-wrap">
+	{% include "templates/includes/taibat_header.html" %}
+
+	<main>
+		<section class="taibat-hero">
+			<div class="taibat-shell taibat-hero-grid">
+				<div class="taibat-panel">
+					<span class="taibat-kicker">منصة عربية للصحة الغذائية</span>
+					<h1 class="taibat-title">نظام الطيبات: موقع عام للتوعية الغذائية بأسلوب عملي واضح</h1>
+					<p class="taibat-lead">
+						نقدم محتوى منظمًا يساعد الزائر على فهم فلسفة النظام، والتمييز بين المسموح والممنوع،
+						وتطبيق جدول أسبوعي بسيط يناسب نمط الحياة اليومي.
+					</p>
+					<div class="taibat-actions">
+						<a class="taibat-btn primary" href="/allowed-foods">ابدأ الآن</a>
+						<a class="taibat-btn ghost" href="/forbidden-foods">تعرف على الممنوعات</a>
+					</div>
+				</div>
+				<div class="taibat-panel taibat-photo-card">
+					<img src="/assets/taibat/images/taibat-hero-food.jpg" alt="صورة أطعمة طبيعية" class="taibat-photo">
+				</div>
+				<div class="taibat-panel">
+					<h2 class="taibat-section-title">ماذا ستجد في الموقع؟</h2>
+					<ul class="taibat-hero-list">
+						<li>فلسفة النظام ومبادئ الجسم السيد</li>
+						<li>أقسام مفصلة للمسموحات والممنوعات</li>
+						<li>ملخص النظريات العلمية الأساسية</li>
+						<li>خطة أسبوعية وأسئلة شائعة للمبتدئين</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="taibat-section">
+			<div class="taibat-shell">
+				<div class="taibat-panel taibat-banner" style="background-image: url('/assets/taibat/images/taibat-home-banner.jpg');">
+					<div class="taibat-banner-overlay">
+						<h2 class="taibat-section-title">واجهة عربية موحدة بتجربة واضحة</h2>
+						<p class="taibat-lead">تم بناء الصفحات بأسلوب متسق مع شريط تنقل موحّد يسهل وصول الزائر لأي قسم خلال ثوانٍ.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="taibat-section">
+			<div class="taibat-shell">
+				<h2 class="taibat-section-title">أقسام رئيسية</h2>
+				<div class="taibat-grid">
+					<a class="taibat-card" href="/philosophy">
+						<h3>فلسفة النظام</h3>
+						<p>فهم مبدأ أن الجسم مصنع متكامل ويحتاج مدخلات نظيفة لا مستخلصات صناعية.</p>
+					</a>
+					<a class="taibat-card" href="/allowed-foods">
+						<h3>الأطعمة المسموحة</h3>
+						<p>دليل الفئات الغذائية الطبيعية المقترحة داخل النظام مع تنظيم واضح.</p>
+					</a>
+					<a class="taibat-card" href="/forbidden-foods">
+						<h3>الأطعمة الممنوعة</h3>
+						<p>أبرز الممنوعات وتأثيرها المحتمل مع عرض بدائل مناسبة.</p>
+					</a>
+					<a class="taibat-card" href="/theories">
+						<h3>النظريات العلمية</h3>
+						<p>عرض مختصر للنظريات المحورية المرتبطة بالصحة والاستقلاب.</p>
+					</a>
+					<a class="taibat-card" href="/weekly-plan">
+						<h3>الجدول الأسبوعي</h3>
+						<p>نموذج تطبيقي مبسط يساعد الزائر على البدء خطوة بخطوة.</p>
+					</a>
+					<a class="taibat-card" href="/faq">
+						<h3>الأسئلة الشائعة</h3>
+						<p>إجابات مباشرة عن الأسئلة المتكررة قبل تطبيق النظام.</p>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="taibat-section">
+			<div class="taibat-shell taibat-newsletter" id="newsletter">
+				<div>
+					<h2 class="taibat-section-title">النشرة البريدية</h2>
+					<p>
+						اشترك ليصلك محتوى دوري عن النظام، مقالات توعوية، وإعلانات صفحات جديدة على الموقع.
+					</p>
+				</div>
+				<form class="taibat-newsletter-form" action="#" method="post">
+					<input type="text" name="full_name" placeholder="الاسم الكامل" required>
+					<input type="email" name="email" placeholder="البريد الإلكتروني" required>
+					<button type="submit">اشترك الآن</button>
+					<span class="taibat-note">سيتم ربط النموذج بقائمة بريدية في Frappe عند الإعداد النهائي.</span>
+				</form>
+			</div>
+		</section>
+	</main>
+
+	{% include "templates/includes/taibat_footer.html" %}
+</div>
+{% endblock %}
