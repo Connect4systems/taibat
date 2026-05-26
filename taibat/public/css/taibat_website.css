@@ -486,14 +486,255 @@ a {
 	gap: 16px;
 }
 
+.taibat-allowed-hero {
+	background: linear-gradient(135deg, rgba(18, 53, 21, 0.94), rgba(56, 112, 49, 0.88));
+	color: #eff9e9;
+	position: relative;
+	overflow: hidden;
+}
+
+.taibat-allowed-hero::before,
+.taibat-allowed-hero::after {
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+	opacity: 0.2;
+	pointer-events: none;
+}
+
+.taibat-allowed-hero::before {
+	width: 240px;
+	height: 240px;
+	background: #f9d079;
+	top: -90px;
+	left: -60px;
+}
+
+.taibat-allowed-hero::after {
+	width: 200px;
+	height: 200px;
+	background: #ffffff;
+	bottom: -80px;
+	right: -30px;
+}
+
+.taibat-allowed-hero .taibat-kicker {
+	background: rgba(255, 255, 255, 0.14);
+	border-color: rgba(255, 255, 255, 0.28);
+	color: #ffffff;
+}
+
+.taibat-allowed-hero .taibat-lead {
+	color: #e1f0dc;
+}
+
+.taibat-metric-row {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 12px;
+	margin-top: 18px;
+}
+
+.taibat-metric {
+	background: rgba(255, 255, 255, 0.12);
+	border: 1px solid rgba(255, 255, 255, 0.24);
+	border-radius: 12px;
+	padding: 12px;
+}
+
+.taibat-metric .num {
+	font-size: 1.15rem;
+	font-weight: 800;
+	color: #fff6de;
+}
+
+.taibat-metric .lbl {
+	font-size: 0.84rem;
+	color: #e7f2df;
+}
+
+.taibat-quick-links {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 12px;
+}
+
+.taibat-quick-link {
+	display: block;
+	padding: 14px;
+	border-radius: 14px;
+	border: 1px solid #d3dfc6;
+	background: linear-gradient(145deg, #f9fdf5, #f0f6e8);
+	font-weight: 700;
+	color: #2c4922;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.taibat-quick-link:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 12px 20px rgba(27, 52, 23, 0.1);
+}
+
+.taibat-filter-wrap {
+	margin-top: 14px;
+	padding: 14px;
+	border-radius: 14px;
+	border: 1px solid #d3deca;
+	background: #f8fcf4;
+}
+
+.taibat-filter-title {
+	font-weight: 700;
+	font-size: 0.95rem;
+	color: #325027;
+	margin-bottom: 10px;
+}
+
+.taibat-filter-chips {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.taibat-filter-chip {
+	display: inline-flex;
+	align-items: center;
+	padding: 8px 12px;
+	border-radius: 999px;
+	border: 1px solid #cbd9bf;
+	background: #ffffff;
+	font-size: 0.87rem;
+	font-weight: 700;
+	color: #35552b;
+}
+
+.taibat-category-section {
+	margin-top: 24px;
+}
+
+.taibat-category-title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+	margin-bottom: 12px;
+}
+
+.taibat-category-title h3 {
+	margin: 0;
+	font-size: 1.2rem;
+}
+
+.taibat-count-badge {
+	padding: 7px 11px;
+	border-radius: 999px;
+	font-size: 0.8rem;
+	font-weight: 800;
+	border: 1px solid #d2dec8;
+	background: #f6fbf1;
+	color: #2f4b25;
+}
+
+.taibat-product-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 14px;
+}
+
+.taibat-product-card {
+	border: 1px solid #d8e3cf;
+	border-radius: 16px;
+	overflow: hidden;
+	background: #fff;
+	box-shadow: 0 10px 22px rgba(26, 41, 22, 0.08);
+	display: grid;
+	grid-template-rows: 170px auto;
+}
+
+.taibat-product-card img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.taibat-product-body {
+	padding: 14px;
+	display: grid;
+	gap: 8px;
+}
+
+.taibat-product-name {
+	font-size: 1rem;
+	font-weight: 800;
+	color: #21411c;
+	margin: 0;
+}
+
+.taibat-product-note {
+	margin: 0;
+	line-height: 1.8;
+	font-size: 0.9rem;
+	color: #4e6047;
+}
+
+.taibat-badge {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5px 10px;
+	border-radius: 999px;
+	font-size: 0.78rem;
+	font-weight: 800;
+	width: fit-content;
+	border: 1px solid transparent;
+}
+
+.taibat-badge.unlimited {
+	background: #e8f8e3;
+	color: #1e6a22;
+	border-color: #bde0b5;
+}
+
+.taibat-badge.daily {
+	background: #eef8e8;
+	color: #3b6a1f;
+	border-color: #c7dfb5;
+}
+
+.taibat-badge.weekly {
+	background: #fff7e7;
+	color: #7c5818;
+	border-color: #ecd3a7;
+}
+
+.taibat-badge.sometimes {
+	background: #f3ecfb;
+	color: #5a367f;
+	border-color: #dbcaf0;
+}
+
+.taibat-product-top {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 8px;
+}
+
 @media (max-width: 1020px) {
 	.taibat-hero-grid,
 	.taibat-newsletter,
 	.taibat-columns,
 	.taibat-two-grid,
 	.taibat-three-grid,
-	.taibat-stats {
+	.taibat-stats,
+	.taibat-metric-row,
+	.taibat-product-grid {
 		grid-template-columns: 1fr;
+	}
+
+	.taibat-quick-links {
+		grid-template-columns: 1fr 1fr;
 	}
 
 	.taibat-hero {
@@ -509,6 +750,10 @@ a {
 	.taibat-panel,
 	.taibat-newsletter {
 		padding: 22px;
+	}
+
+	.taibat-quick-links {
+		grid-template-columns: 1fr;
 	}
 
 	.taibat-links {
