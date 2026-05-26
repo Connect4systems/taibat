@@ -1,6 +1,6 @@
 {% extends "templates/web.html" %}
 
-{% block title %}نظام الطيبات - الصفحة الرئيسية{% endblock %}
+{% block title %}نظام الطيبات - الدليل الشامل{% endblock %}
 
 {% block page_content %}
 <div class="taibat-wrap">
@@ -8,43 +8,40 @@
 
 	<main>
 		<section class="taibat-hero">
-			<div class="taibat-shell taibat-hero-grid">
-				<div class="taibat-panel">
-					<span class="taibat-kicker">نظام الطيبات - منصة عامة عربية</span>
-					<h1 class="taibat-title">دليل شامل للمسموحات والممنوعات والصيام بأسلوب مبسط وحديث</h1>
-					<p class="taibat-lead">
-						الموقع مصمم للجمهور العام: محتوى منظم، قوائم غذائية واضحة، قواعد يومية عملية،
-						ومسارات تبدأ معك من أول يوم حتى الاستمرارية.
-					</p>
+			<div class="taibat-shell">
+				<div class="taibat-panel taibat-home-lead">
+					<span class="taibat-kicker">نظام غذائي طبيعي</span>
+					<h1 class="taibat-title">نظام الطيبات</h1>
+					<p class="taibat-lead">غذاء متوازن، قواعد واضحة، ومؤشر تكرار يساعدك تعرف ماذا تأكل ومتى تتوقف. تجربة قريبة من الموقع الأصلي مع هوية بصرية مختلفة وأكثر هدوءًا.</p>
 					<div class="taibat-actions">
-						<a class="taibat-btn primary" href="/allowed">ابدأ الآن</a>
-						<a class="taibat-btn ghost" href="/forbidden">تعرف على الممنوعات</a>
+						<a class="taibat-btn primary" href="/allowed">استعرض المسموحات</a>
+						<a class="taibat-btn ghost" href="/forbidden">اعرف الممنوعات</a>
+						<a class="taibat-btn light" href="/weekly-plan">ابدأ بخطة أسبوعية</a>
 					</div>
 					<div class="taibat-stats">
-						<div class="taibat-stat"><div class="num">RTL</div><div class="lbl">تجربة عربية كاملة</div></div>
-						<div class="taibat-stat"><div class="num">+8</div><div class="lbl">صفحات أساسية</div></div>
-						<div class="taibat-stat"><div class="num">Daily</div><div class="lbl">روتين يومي واضح</div></div>
-						<div class="taibat-stat"><div class="num">Weekly</div><div class="lbl">جدول وصيام أسبوعي</div></div>
+						<div class="taibat-stat"><div class="num">110+</div><div class="lbl">منتج مسموح</div></div>
+						<div class="taibat-stat"><div class="num">12</div><div class="lbl">تصنيف غذائي</div></div>
+						<div class="taibat-stat"><div class="num">4</div><div class="lbl">مستويات تكرار</div></div>
+						<div class="taibat-stat"><div class="num">7</div><div class="lbl">أيام خطة بداية</div></div>
 					</div>
 				</div>
-				<div class="taibat-panel taibat-photo-card">
-					<img src="/assets/taibat/images/taibat-hero-food.jpg" alt="صورة أطعمة طبيعية" class="taibat-photo">
-				</div>
-				<div class="taibat-panel">
-					<h2 class="taibat-section-title">المحاور الرئيسية</h2>
-					<ul class="taibat-hero-list">
-						<li>المسموحات والممنوعات بتفاصيل تطبيقية</li>
-						<li>الصيام الأسبوعي والروتين اليومي</li>
-						<li>فلسفة النظام والنظريات العلمية</li>
-						<li>الأسئلة الشائعة وخطة البدء</li>
-					</ul>
-					<div class="taibat-chip-list">
-						<span class="taibat-chip">الجوع الحقيقي</span>
-						<span class="taibat-chip">التوقف قبل الشبع</span>
-						<span class="taibat-chip">شرب الماء</span>
-						<span class="taibat-chip">رياضة يومية خفيفة</span>
-					</div>
-				</div>
+			</div>
+		</section>
+
+		<section class="taibat-section" style="padding-top:0;">
+			<div class="taibat-shell taibat-grid">
+				<a class="taibat-card" href="/allowed">
+					<h3>المسموحات</h3>
+					<p>قائمة عملية للأطعمة والمشروبات المسموحة، منظمة حسب التصنيف ومستوى التكرار.</p>
+				</a>
+				<a class="taibat-card" href="/forbidden">
+					<h3>الممنوعات</h3>
+					<p>الأصناف التي تربك الالتزام مع بدائل مباشرة تساعدك في القرار اليومي.</p>
+				</a>
+				<a class="taibat-card" href="/weekly-plan">
+					<h3>الخطة الأسبوعية</h3>
+					<p>نموذج أسبوع أول: وجبات بسيطة، صيام منظم، ماء، وحركة يومية خفيفة.</p>
+				</a>
 			</div>
 		</section>
 
@@ -52,44 +49,37 @@
 			<div class="taibat-shell">
 				<div class="taibat-panel taibat-banner" style="background-image: url('/assets/taibat/images/taibat-home-banner.jpg');">
 					<div class="taibat-banner-overlay">
-						<h2 class="taibat-section-title">الفكرة العامة</h2>
-						<p class="taibat-lead">غذاء متوازن + التزام يومي + صيام منظم = جسم أخف وطاقة أفضل ووضوح في الروتين.</p>
+						<span class="taibat-kicker">القاعدة الذهبية</span>
+						<h2 class="taibat-section-title">مؤشر التكرار</h2>
+						<p class="taibat-lead">ليست كل المسموحات بنفس التكرار. بعض الأطعمة أساس يومي، وبعضها أسبوعي أو على فترات، والهدف أن يبقى القرار واضحًا قبل الوجبة.</p>
+						<div class="taibat-actions">
+							<a class="taibat-btn primary" href="/allowed">افتح دليل المسموحات</a>
+							<a class="taibat-btn ghost" href="/fasting">دليل الصيام</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
 		<section class="taibat-section">
-			<div class="taibat-shell">
-				<h2 class="taibat-section-title">أقسام الموقع</h2>
-				<div class="taibat-grid">
-					<a class="taibat-card" href="/philosophy">
-						<h3>فلسفة النظام</h3>
-						<p>فهم علاقة الأكل الطبيعي بوظائف الجسم، ولماذا المدخلات البسيطة أهم من التعقيد.</p>
-					</a>
-					<a class="taibat-card" href="/allowed">
-						<h3>الأطعمة المسموحة</h3>
-						<p>قائمة عملية محدثة وفق المرفقات: لحوم، أسماك، طيور، فواكه، دهون، ومشروبات.</p>
-					</a>
-					<a class="taibat-card" href="/forbidden">
-						<h3>الأطعمة الممنوعة</h3>
-						<p>ممنوعات شائعة مع بدائل عملية حتى تحافظ على الالتزام بدون تعقيد.</p>
-					</a>
-					<a class="taibat-card" href="/fasting">
-						<h3>الصيام</h3>
-						<p>دليل الصيام الأسبوعي والشهري، وما الذي يمكن فعله قبله وأثناءه وبعده.</p>
-					</a>
-					<a class="taibat-card" href="/theories">
-						<h3>النظريات العلمية</h3>
-						<p>ملخص علمي مبسط يشرح الصورة الكبيرة خلف توصيات النظام الغذائية.</p>
-					</a>
-					<a class="taibat-card" href="/weekly-plan">
-						<h3>الجدول الأسبوعي</h3>
-						<p>خطة تطبيق جاهزة للمبتدئ: ماذا يأكل، ومتى يصوم، وكيف يتابع نفسه.</p>
-					</a>
+			<div class="taibat-shell taibat-two-grid">
+				<div class="taibat-card">
+					<h3>منهج التطبيق</h3>
+					<ul class="taibat-rich-list">
+						<li><strong>لا تأكل إلا عند الجوع:</strong> ابدأ من الإحساس الحقيقي لا من العادة.</li>
+						<li><strong>توقف قبل الشبع:</strong> اترك مساحة للجسم كي يهضم بهدوء.</li>
+						<li><strong>نظم الصيام:</strong> الاثنين والخميس، والأيام البيض حسب القدرة والحالة.</li>
+						<li><strong>ثبت الأساسيات:</strong> ماء دافئ، حركة خفيفة، وطعام طبيعي بسيط.</li>
+					</ul>
 				</div>
-				<div class="taibat-callout warning" style="margin-top:16px;">
-					<strong>تنبيه مهم:</strong> المحتوى تثقيفي عام. في الأمراض المزمنة أو الأدوية المستمرة، يلزم التنسيق مع الطبيب المعالج.
+				<div class="taibat-card">
+					<h3>استعرض النظام</h3>
+					<div class="taibat-hero-list">
+						<a href="/philosophy">فلسفة النظام والقواعد الأساسية</a>
+						<a href="/theories">النظريات العلمية المبسطة</a>
+						<a href="/fasting">دليل الصيام الأسبوعي والشهري</a>
+						<a href="/faq">إجابات الأسئلة الشائعة</a>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -98,9 +88,7 @@
 			<div class="taibat-shell taibat-newsletter" id="newsletter">
 				<div>
 					<h2 class="taibat-section-title">النشرة البريدية</h2>
-					<p>
-						اشترك ليصلك محتوى دوري عن النظام، مقالات توعوية، وإعلانات صفحات جديدة على الموقع.
-					</p>
+					<p>اشترك ليصلك محتوى دوري عن النظام، مقالات توعوية، وتحديثات القوائم الغذائية على الموقع.</p>
 				</div>
 				<form class="taibat-newsletter-form" action="#" method="post">
 					<input type="text" name="full_name" placeholder="الاسم الكامل" required>

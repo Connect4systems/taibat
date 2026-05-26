@@ -1,16 +1,20 @@
 :root {
-	--bg: #f6f4ef;
-	--paper: #fffdf8;
-	--text: #1f2d16;
-	--muted: #5f6f51;
-	--brand: #2f6b2f;
-	--brand-strong: #19471d;
-	--accent: #d99f45;
-	--line: #d8ddcf;
-	--radius-lg: 24px;
+	--bg: #f7f3ea;
+	--paper: #fffdfa;
+	--text: #132335;
+	--muted: #66717d;
+	--brand: #0f766e;
+	--brand-strong: #0b3f4a;
+	--accent: #e56b4f;
+	--accent-soft: #ffe2d8;
+	--gold: #d6a642;
+	--mint: #dff5ef;
+	--blue-soft: #e8f3f7;
+	--line: #e3ded3;
+	--radius-lg: 22px;
 	--radius-md: 14px;
-	--shadow-soft: 0 16px 35px rgba(16, 37, 16, 0.08);
-	--shadow-card: 0 12px 24px rgba(18, 28, 18, 0.06);
+	--shadow-soft: 0 22px 55px rgba(15, 63, 74, 0.12);
+	--shadow-card: 0 14px 30px rgba(19, 35, 53, 0.08);
 }
 
 html,
@@ -18,8 +22,9 @@ body {
 	direction: rtl;
 	font-family: "Tajawal", "Segoe UI", sans-serif;
 	color: var(--text);
-	background: radial-gradient(circle at 90% 10%, #f4e8cf 0%, transparent 33%),
-		radial-gradient(circle at 12% 85%, #dbeacd 0%, transparent 30%),
+	background:
+		linear-gradient(180deg, rgba(15, 118, 110, 0.08), transparent 420px),
+		linear-gradient(135deg, rgba(229, 107, 79, 0.1), transparent 32%),
 		var(--bg);
 	scroll-behavior: smooth;
 }
@@ -45,6 +50,11 @@ a {
 	text-decoration: none;
 }
 
+button,
+input {
+	font-family: inherit;
+}
+
 .taibat-wrap {
 	min-height: 100vh;
 	display: flex;
@@ -52,85 +62,271 @@ a {
 }
 
 .taibat-shell {
-	width: min(1150px, 94vw);
+	width: min(1180px, 94vw);
 	margin: 0 auto;
 }
 
 .taibat-topbar {
 	position: sticky;
 	top: 0;
-	z-index: 12;
-	backdrop-filter: blur(8px);
-	background: rgba(246, 244, 239, 0.86);
-	border-bottom: 1px solid rgba(86, 105, 79, 0.18);
+	z-index: 20;
+	background: rgba(255, 253, 250, 0.9);
+	border-bottom: 1px solid rgba(19, 35, 53, 0.1);
+	backdrop-filter: blur(14px);
+}
+
+.taibat-announcement {
+	background: var(--brand-strong);
+	color: #f9fbfb;
+	font-size: 0.88rem;
+	line-height: 1.8;
+	padding: 6px 0;
 }
 
 .taibat-nav {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 14px 0;
-	gap: 20px;
+	gap: 18px;
+	padding: 12px 0;
 }
 
 .taibat-brand {
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	gap: 10px;
-	font-weight: 700;
-	font-size: 1.02rem;
+	font-weight: 800;
 	white-space: nowrap;
 }
 
+.taibat-brand span:last-child {
+	display: grid;
+	gap: 1px;
+}
+
+.taibat-brand small {
+	color: var(--muted);
+	font-size: 0.76rem;
+	font-weight: 700;
+}
+
 .taibat-brand-badge {
-	width: 36px;
-	height: 36px;
+	width: 42px;
+	height: 42px;
 	border-radius: 50%;
-	background: linear-gradient(160deg, var(--brand) 0%, #538a35 100%);
+	background: linear-gradient(145deg, var(--brand-strong), var(--brand));
+	border: 2px solid rgba(255, 255, 255, 0.7);
+	box-shadow: 0 12px 24px rgba(15, 63, 74, 0.22);
 	display: grid;
 	place-items: center;
 	color: #fff;
-	font-size: 1.1rem;
+	font-size: 1.22rem;
 }
 
 .taibat-links {
 	display: flex;
 	align-items: center;
+	justify-content: flex-end;
 	gap: 8px;
 	flex-wrap: wrap;
-	justify-content: flex-end;
 }
 
-.taibat-links a {
-	padding: 9px 13px;
+.taibat-links a,
+.taibat-menu button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 38px;
+	padding: 8px 12px;
 	border-radius: 999px;
-	font-weight: 600;
-	font-size: 0.92rem;
-	color: #2d4324;
-	transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+	font-weight: 800;
+	font-size: 0.91rem;
+	color: #203041;
+	transition: background-color 0.18s ease, color 0.18s ease, transform 0.18s ease;
+}
+
+.taibat-menu button {
+	border: 0;
+	background: transparent;
+	cursor: pointer;
+}
+
+.taibat-menu button::after {
+	content: "▾";
+	font-size: 0.7rem;
+	margin-inline-start: 6px;
 }
 
 .taibat-links a:hover,
-.taibat-links a.active {
-	background: #ecf2e5;
+.taibat-menu:hover button,
+.taibat-menu:focus-within button {
+	background: var(--blue-soft);
 	color: var(--brand-strong);
 	transform: translateY(-1px);
 }
 
+.taibat-menu {
+	position: relative;
+}
+
+.taibat-menu-panel {
+	position: absolute;
+	top: calc(100% + 10px);
+	right: 0;
+	min-width: 210px;
+	padding: 8px;
+	border: 1px solid rgba(19, 35, 53, 0.1);
+	border-radius: 16px;
+	background: var(--paper);
+	box-shadow: var(--shadow-soft);
+	display: none;
+}
+
+.taibat-menu:hover .taibat-menu-panel,
+.taibat-menu:focus-within .taibat-menu-panel {
+	display: grid;
+	gap: 4px;
+}
+
+.taibat-menu-panel a {
+	justify-content: flex-start;
+	border-radius: 10px;
+	width: 100%;
+}
+
+.taibat-nav-pill {
+	background: var(--mint);
+	color: #075b55 !important;
+}
+
+.taibat-nav-pill.danger {
+	background: var(--accent-soft);
+	color: #933820 !important;
+}
+
 .taibat-hero {
-	padding: 72px 0 46px;
+	padding: 56px 0 34px;
 }
 
 .taibat-hero-grid {
 	display: grid;
-	grid-template-columns: 1.2fr 1fr;
-	gap: 24px;
+	grid-template-columns: 1.15fr 0.85fr;
+	gap: 20px;
 	align-items: stretch;
+}
+
+.taibat-panel {
+	background: rgba(255, 253, 250, 0.94);
+	border: 1px solid var(--line);
+	border-radius: var(--radius-lg);
+	box-shadow: var(--shadow-soft);
+	padding: 30px;
+}
+
+.taibat-home-lead {
+	position: relative;
+	overflow: hidden;
+	background:
+		linear-gradient(135deg, rgba(11, 63, 74, 0.94), rgba(15, 118, 110, 0.86)),
+		url("/assets/taibat/images/taibat-hero-food.jpg");
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+	min-height: 470px;
+	display: grid;
+	align-content: center;
+}
+
+.taibat-home-lead .taibat-kicker {
+	background: rgba(255, 255, 255, 0.14);
+	border-color: rgba(255, 255, 255, 0.24);
+	color: #fff;
+}
+
+.taibat-home-lead .taibat-title {
+	color: #fff;
+	font-size: clamp(2.2rem, 4.8vw, 4.7rem);
+	line-height: 1.16;
+	max-width: 760px;
+}
+
+.taibat-home-lead .taibat-lead {
+	color: rgba(255, 255, 255, 0.86);
+	max-width: 710px;
+}
+
+.taibat-kicker {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 8px 13px;
+	background: var(--mint);
+	border: 1px solid #c4e8df;
+	border-radius: 999px;
+	font-size: 0.84rem;
+	font-weight: 800;
+	color: #0a5d57;
+	margin-bottom: 15px;
+}
+
+.taibat-title {
+	font-size: clamp(1.9rem, 3vw, 3rem);
+	line-height: 1.28;
+	margin: 0 0 12px;
+	color: var(--text);
+}
+
+.taibat-lead {
+	line-height: 1.95;
+	font-size: 1.03rem;
+	color: #4d5966;
+	margin: 0;
+}
+
+.taibat-actions {
+	display: flex;
+	gap: 12px;
+	margin-top: 26px;
+	flex-wrap: wrap;
+}
+
+.taibat-btn {
+	min-height: 44px;
+	padding: 11px 19px;
+	border-radius: 999px;
+	font-weight: 800;
+	font-size: 0.95rem;
+	border: 1px solid transparent;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.taibat-btn:hover {
+	transform: translateY(-1px);
+}
+
+.taibat-btn.primary {
+	background: linear-gradient(135deg, var(--accent), #c64f38);
+	color: #fff;
+	box-shadow: 0 14px 30px rgba(229, 107, 79, 0.28);
+}
+
+.taibat-btn.ghost {
+	border-color: rgba(255, 255, 255, 0.4);
+	background: rgba(255, 255, 255, 0.12);
+	color: #fff;
+}
+
+.taibat-btn.light {
+	border-color: #d7e5e5;
+	background: #fff;
+	color: var(--brand-strong);
 }
 
 .taibat-photo-card {
 	display: grid;
-	place-items: center;
 	overflow: hidden;
 	padding: 0;
 	min-height: 280px;
@@ -143,76 +339,6 @@ a {
 	display: block;
 }
 
-.taibat-panel {
-	background: var(--paper);
-	border: 1px solid var(--line);
-	border-radius: var(--radius-lg);
-	box-shadow: var(--shadow-soft);
-	padding: 34px;
-}
-
-.taibat-kicker {
-	display: inline-flex;
-	align-items: center;
-	gap: 8px;
-	padding: 8px 14px;
-	background: #eef5e7;
-	border: 1px solid #dcead0;
-	border-radius: 999px;
-	font-size: 0.84rem;
-	font-weight: 700;
-	color: #325025;
-	margin-bottom: 16px;
-}
-
-.taibat-title {
-	font-size: clamp(1.9rem, 3vw, 2.9rem);
-	line-height: 1.3;
-	margin: 0 0 12px;
-}
-
-.taibat-lead {
-	line-height: 1.9;
-	font-size: 1.03rem;
-	color: #42543a;
-	margin: 0;
-}
-
-.taibat-actions {
-	display: flex;
-	gap: 12px;
-	margin-top: 26px;
-	flex-wrap: wrap;
-}
-
-.taibat-btn {
-	padding: 12px 20px;
-	border-radius: 999px;
-	font-weight: 700;
-	font-size: 0.95rem;
-	border: 1px solid transparent;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.taibat-btn:hover {
-	transform: translateY(-1px);
-}
-
-.taibat-btn.primary {
-	background: linear-gradient(135deg, var(--brand-strong), #33652f);
-	color: #fff;
-	box-shadow: 0 10px 24px rgba(36, 70, 30, 0.3);
-}
-
-.taibat-btn.ghost {
-	border-color: #c9d7be;
-	background: #f8fcf4;
-	color: #27471f;
-}
-
 .taibat-hero-list {
 	list-style: none;
 	margin: 0;
@@ -221,13 +347,15 @@ a {
 	gap: 12px;
 }
 
-.taibat-hero-list li {
+.taibat-hero-list li,
+.taibat-hero-list a {
+	display: block;
 	padding: 13px 14px;
 	border-radius: var(--radius-md);
-	background: #f7fbf3;
-	border: 1px solid #e1ebd7;
-	font-weight: 600;
-	color: #33462a;
+	background: #f6fbfa;
+	border: 1px solid #dbecea;
+	font-weight: 700;
+	color: #263a4d;
 }
 
 .taibat-section {
@@ -240,49 +368,67 @@ a {
 	position: relative;
 	padding: 0;
 	overflow: hidden;
-	min-height: 210px;
+	min-height: 220px;
 }
 
 .taibat-banner-overlay {
-	background: linear-gradient(95deg, rgba(12, 32, 14, 0.8), rgba(40, 73, 33, 0.52));
-	padding: 32px;
+	background: linear-gradient(95deg, rgba(11, 63, 74, 0.88), rgba(229, 107, 79, 0.42));
+	padding: 34px;
 	height: 100%;
-	color: #f3faeb;
+	color: #fff;
 }
 
 .taibat-banner-overlay .taibat-lead {
-	color: #dde9d5;
+	color: rgba(255, 255, 255, 0.86);
 }
 
 .taibat-section-title {
-	font-size: clamp(1.4rem, 2vw, 2rem);
+	font-size: clamp(1.35rem, 2vw, 2rem);
 	margin: 0 0 16px;
+	color: var(--text);
 }
 
-.taibat-grid {
+.taibat-home-lead .taibat-section-title,
+.taibat-banner-overlay .taibat-section-title,
+.taibat-newsletter .taibat-section-title {
+	color: #fff;
+}
+
+.taibat-grid,
+.taibat-three-grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	gap: 18px;
+	gap: 16px;
 }
 
 .taibat-card {
-	background: #fff;
-	border: 1px solid #dce3d3;
-	border-radius: 18px;
+	background: var(--paper);
+	border: 1px solid var(--line);
+	border-radius: 16px;
 	padding: 22px;
 	box-shadow: var(--shadow-card);
+	transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+a.taibat-card:hover,
+.taibat-quick-link:hover,
+.taibat-product-card:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 20px 38px rgba(19, 35, 53, 0.12);
+	border-color: rgba(15, 118, 110, 0.28);
 }
 
 .taibat-card h3 {
 	margin-top: 0;
 	margin-bottom: 8px;
 	font-size: 1.1rem;
+	color: #14283b;
 }
 
 .taibat-card p {
 	margin: 0;
-	line-height: 1.8;
-	color: #53634b;
+	line-height: 1.85;
+	color: #566473;
 }
 
 .taibat-rich-list {
@@ -295,14 +441,14 @@ a {
 
 .taibat-rich-list li {
 	padding: 12px 14px;
-	border: 1px solid #d9e2d0;
+	border: 1px solid #d9e7e5;
 	border-radius: 12px;
-	background: #f9fcf6;
+	background: #f8fbfa;
 	line-height: 1.8;
 }
 
 .taibat-rich-list li strong {
-	color: #1f3f19;
+	color: var(--brand-strong);
 }
 
 .taibat-chip-list {
@@ -316,106 +462,108 @@ a {
 	padding: 7px 11px;
 	border-radius: 999px;
 	font-size: 0.86rem;
-	font-weight: 700;
-	border: 1px solid #d3ddc8;
-	background: #f4f9ef;
-	color: #35552c;
+	font-weight: 800;
+	border: 1px solid #cfe4e1;
+	background: #f5fbfa;
+	color: #0f5c56;
 }
 
 .taibat-callout {
-	padding: 16px;
+	padding: 17px;
 	border-radius: 14px;
-	border: 1px solid #c9d8ba;
-	background: linear-gradient(140deg, #f1f8e9, #f8fbf4);
+	border: 1px solid #bee3dc;
+	background: linear-gradient(140deg, #edf9f6, #fffdfa);
 	line-height: 1.9;
-	color: #35552b;
+	color: #244754;
 }
 
 .taibat-callout.warning {
-	border-color: #e8d3a9;
-	background: linear-gradient(135deg, #fff9ef, #fdf5e6);
-	color: #6e4a13;
+	border-color: #f0cbbb;
+	background: linear-gradient(135deg, #fff4ef, #fffdfa);
+	color: #7a3723;
 }
 
-.taibat-stats {
+.taibat-stats,
+.taibat-metric-row {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 12px;
-	margin-top: 18px;
+	margin-top: 22px;
 }
 
-.taibat-stat {
-	border: 1px solid #d8e0cf;
+.taibat-stat,
+.taibat-metric {
+	border: 1px solid rgba(255, 255, 255, 0.22);
 	border-radius: 14px;
 	padding: 14px;
-	background: #fcfef8;
+	background: rgba(255, 255, 255, 0.12);
+	backdrop-filter: blur(6px);
 }
 
-.taibat-stat .num {
+.taibat-stat .num,
+.taibat-metric .num {
 	font-size: 1.35rem;
-	font-weight: 800;
-	color: #1f4a1f;
+	font-weight: 900;
+	color: #fff;
 }
 
-.taibat-stat .lbl {
+.taibat-stat .lbl,
+.taibat-metric .lbl {
 	font-size: 0.86rem;
-	color: #506248;
+	color: rgba(255, 255, 255, 0.78);
 }
 
-.taibat-two-grid {
+.taibat-two-grid,
+.taibat-columns {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 16px;
 }
 
-.taibat-three-grid {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 16px;
-}
-
 .taibat-source {
 	font-size: 0.9rem;
-	color: #5a6f50;
+	color: #5a6b77;
 	line-height: 1.8;
 	margin-top: 10px;
 }
 
-.taibat-source a {
-	color: #2e5f2a;
+.taibat-source a,
+.taibat-rich-list a {
+	color: var(--brand);
 	text-decoration: underline;
 }
 
 .taibat-timeline {
-	border-inline-start: 3px solid #c4d6b2;
+	border-inline-start: 3px solid #bddbd7;
 	padding-inline-start: 14px;
 	display: grid;
 	gap: 10px;
 }
 
 .taibat-timeline .item {
-	background: #fbfef8;
-	border: 1px solid #dae4d2;
+	background: #f9fcfb;
+	border: 1px solid #dbe8e6;
 	border-radius: 12px;
 	padding: 12px;
 	line-height: 1.8;
 }
 
 .taibat-newsletter {
-	background: linear-gradient(140deg, #18381d 0%, #29562c 60%, #3d6f3c 100%);
-	color: #f8ffef;
+	background: linear-gradient(140deg, var(--brand-strong) 0%, var(--brand) 58%, #d95f46 100%);
+	color: #f8fffd;
 	border-radius: var(--radius-lg);
 	padding: 34px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 20px;
 	align-items: center;
+	box-shadow: var(--shadow-soft);
 }
 
 .taibat-newsletter p {
 	margin: 0;
 	line-height: 1.9;
-	color: #dce8cf;
+	color: rgba(255, 255, 255, 0.82);
 }
 
 .taibat-newsletter-form {
@@ -426,96 +574,68 @@ a {
 
 .taibat-newsletter-form input {
 	width: 100%;
-	padding: 13px 14px;
+	min-height: 44px;
+	padding: 12px 14px;
 	border-radius: 10px;
-	border: 1px solid rgba(234, 247, 227, 0.3);
-	background: rgba(250, 255, 246, 0.08);
-	color: #f6ffea;
+	border: 1px solid rgba(19, 35, 53, 0.13);
+	background: #fff;
+	color: var(--text);
 }
 
-.taibat-newsletter-form input::placeholder {
-	color: #c6d6ba;
+.taibat-newsletter .taibat-newsletter-form input {
+	border-color: rgba(255, 255, 255, 0.3);
+	background: rgba(255, 255, 255, 0.12);
+	color: #fff;
+}
+
+.taibat-newsletter .taibat-newsletter-form input::placeholder {
+	color: rgba(255, 255, 255, 0.7);
 }
 
 .taibat-newsletter-form button {
+	min-height: 44px;
 	padding: 12px 16px;
 	border: 0;
 	border-radius: 12px;
-	font-weight: 700;
-	background: linear-gradient(135deg, #e0be83, #be8a3c);
-	color: #2d220f;
+	font-weight: 800;
+	background: linear-gradient(135deg, var(--gold), #efc875);
+	color: #271d0a;
 	cursor: pointer;
 }
 
 .taibat-note {
 	font-size: 0.86rem;
-	color: #def0d2;
-}
-
-.taibat-footer {
-	margin-top: auto;
-	padding: 28px 0 36px;
-	color: #506248;
-	font-size: 0.94rem;
-}
-
-.taibat-footer .meta {
-	display: flex;
-	justify-content: space-between;
-	gap: 14px;
-	flex-wrap: wrap;
-	border-top: 1px solid #d6dfcd;
-	padding-top: 18px;
+	color: rgba(255, 255, 255, 0.72);
 }
 
 .taibat-page-hero {
-	padding: 52px 0 30px;
+	padding: 48px 0 28px;
 }
 
 .taibat-page-hero .taibat-panel {
-	padding: 28px;
+	position: relative;
+	overflow: hidden;
+}
+
+.taibat-page-hero .taibat-panel::before {
+	content: "";
+	position: absolute;
+	inset-inline-end: 0;
+	top: 0;
+	width: 7px;
+	height: 100%;
+	background: linear-gradient(180deg, var(--brand), var(--accent));
 }
 
 .taibat-page-content {
 	padding-bottom: 52px;
 }
 
-.taibat-columns {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 16px;
-}
-
 .taibat-allowed-hero {
-	background: linear-gradient(135deg, rgba(18, 53, 21, 0.94), rgba(56, 112, 49, 0.88));
-	color: #eff9e9;
+	background: linear-gradient(135deg, rgba(11, 63, 74, 0.96), rgba(15, 118, 110, 0.88));
+	color: #effffb;
 	position: relative;
 	overflow: hidden;
-}
-
-.taibat-allowed-hero::before,
-.taibat-allowed-hero::after {
-	content: "";
-	position: absolute;
-	border-radius: 50%;
-	opacity: 0.2;
-	pointer-events: none;
-}
-
-.taibat-allowed-hero::before {
-	width: 240px;
-	height: 240px;
-	background: #f9d079;
-	top: -90px;
-	left: -60px;
-}
-
-.taibat-allowed-hero::after {
-	width: 200px;
-	height: 200px;
-	background: #ffffff;
-	bottom: -80px;
-	right: -30px;
 }
 
 .taibat-allowed-hero .taibat-kicker {
@@ -524,33 +644,12 @@ a {
 	color: #ffffff;
 }
 
+.taibat-allowed-hero .taibat-title {
+	color: #fff;
+}
+
 .taibat-allowed-hero .taibat-lead {
-	color: #e1f0dc;
-}
-
-.taibat-metric-row {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 12px;
-	margin-top: 18px;
-}
-
-.taibat-metric {
-	background: rgba(255, 255, 255, 0.12);
-	border: 1px solid rgba(255, 255, 255, 0.24);
-	border-radius: 12px;
-	padding: 12px;
-}
-
-.taibat-metric .num {
-	font-size: 1.15rem;
-	font-weight: 800;
-	color: #fff6de;
-}
-
-.taibat-metric .lbl {
-	font-size: 0.84rem;
-	color: #e7f2df;
+	color: rgba(255, 255, 255, 0.82);
 }
 
 .taibat-quick-links {
@@ -563,30 +662,25 @@ a {
 	display: block;
 	padding: 14px;
 	border-radius: 14px;
-	border: 1px solid #d3dfc6;
-	background: linear-gradient(145deg, #f9fdf5, #f0f6e8);
-	font-weight: 700;
-	color: #2c4922;
-	transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.taibat-quick-link:hover {
-	transform: translateY(-2px);
-	box-shadow: 0 12px 20px rgba(27, 52, 23, 0.1);
+	border: 1px solid #d5e5e2;
+	background: linear-gradient(145deg, #fffdfa, #eef8f6);
+	font-weight: 800;
+	color: #173746;
+	transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
 }
 
 .taibat-filter-wrap {
 	margin-top: 14px;
 	padding: 14px;
 	border-radius: 14px;
-	border: 1px solid #d3deca;
-	background: #f8fcf4;
+	border: 1px solid #d5e5e2;
+	background: #fbfefd;
 }
 
 .taibat-filter-title {
-	font-weight: 700;
+	font-weight: 800;
 	font-size: 0.95rem;
-	color: #325027;
+	color: var(--brand-strong);
 	margin-bottom: 10px;
 }
 
@@ -601,11 +695,11 @@ a {
 	align-items: center;
 	padding: 8px 12px;
 	border-radius: 999px;
-	border: 1px solid #cbd9bf;
+	border: 1px solid #c8e0dd;
 	background: #ffffff;
 	font-size: 0.87rem;
-	font-weight: 700;
-	color: #35552b;
+	font-weight: 800;
+	color: #214151;
 }
 
 .taibat-category-section {
@@ -629,10 +723,10 @@ a {
 	padding: 7px 11px;
 	border-radius: 999px;
 	font-size: 0.8rem;
-	font-weight: 800;
-	border: 1px solid #d2dec8;
-	background: #f6fbf1;
-	color: #2f4b25;
+	font-weight: 900;
+	border: 1px solid #d2e4e1;
+	background: #f7fcfb;
+	color: #173746;
 }
 
 .taibat-product-grid {
@@ -642,13 +736,14 @@ a {
 }
 
 .taibat-product-card {
-	border: 1px solid #d8e3cf;
+	border: 1px solid #d8e6e3;
 	border-radius: 16px;
 	overflow: hidden;
-	background: #fff;
-	box-shadow: 0 10px 22px rgba(26, 41, 22, 0.08);
+	background: var(--paper);
+	box-shadow: var(--shadow-card);
 	display: grid;
 	grid-template-rows: 170px auto;
+	transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
 }
 
 .taibat-product-card img {
@@ -656,6 +751,7 @@ a {
 	height: 100%;
 	object-fit: cover;
 	display: block;
+	background: #eff8f6;
 }
 
 .taibat-product-body {
@@ -666,8 +762,8 @@ a {
 
 .taibat-product-name {
 	font-size: 1rem;
-	font-weight: 800;
-	color: #21411c;
+	font-weight: 900;
+	color: #14283b;
 	margin: 0;
 }
 
@@ -675,7 +771,7 @@ a {
 	margin: 0;
 	line-height: 1.8;
 	font-size: 0.9rem;
-	color: #4e6047;
+	color: #586878;
 }
 
 .taibat-badge {
@@ -685,40 +781,87 @@ a {
 	padding: 5px 10px;
 	border-radius: 999px;
 	font-size: 0.78rem;
-	font-weight: 800;
+	font-weight: 900;
 	width: fit-content;
 	border: 1px solid transparent;
 }
 
 .taibat-badge.unlimited {
-	background: #e8f8e3;
-	color: #1e6a22;
-	border-color: #bde0b5;
+	background: #def8ef;
+	color: #08705f;
+	border-color: #b6e7dc;
 }
 
 .taibat-badge.daily {
-	background: #eef8e8;
-	color: #3b6a1f;
-	border-color: #c7dfb5;
+	background: #e8f3ff;
+	color: #215f95;
+	border-color: #c7ddf0;
 }
 
 .taibat-badge.weekly {
-	background: #fff7e7;
-	color: #7c5818;
-	border-color: #ecd3a7;
+	background: #fff3d8;
+	color: #755414;
+	border-color: #edd390;
 }
 
 .taibat-badge.sometimes {
-	background: #f3ecfb;
-	color: #5a367f;
-	border-color: #dbcaf0;
+	background: #ffe8df;
+	color: #9b3a21;
+	border-color: #f2c5b5;
 }
 
 .taibat-product-top {
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: space-between;
 	gap: 8px;
+}
+
+.taibat-footer {
+	margin-top: auto;
+	padding: 34px 0 36px;
+	color: #5d6b77;
+	font-size: 0.94rem;
+}
+
+.taibat-footer-grid {
+	display: grid;
+	grid-template-columns: 1.4fr 0.8fr 0.8fr;
+	gap: 20px;
+	padding: 24px;
+	border: 1px solid var(--line);
+	border-radius: var(--radius-lg);
+	background: rgba(255, 253, 250, 0.78);
+	box-shadow: var(--shadow-card);
+}
+
+.taibat-footer p {
+	margin: 12px 0 0;
+	line-height: 1.8;
+	max-width: 560px;
+}
+
+.taibat-footer h3 {
+	margin: 0 0 12px;
+	color: var(--text);
+	font-size: 1rem;
+}
+
+.taibat-footer-grid a:not(.taibat-brand) {
+	display: block;
+	margin-bottom: 8px;
+	font-weight: 800;
+	color: #244754;
+}
+
+.taibat-footer .meta {
+	display: flex;
+	justify-content: space-between;
+	gap: 14px;
+	flex-wrap: wrap;
+	border-top: 1px solid #d9d4c9;
+	padding-top: 18px;
+	margin-top: 18px;
 }
 
 @media (max-width: 1020px) {
@@ -729,34 +872,62 @@ a {
 	.taibat-three-grid,
 	.taibat-stats,
 	.taibat-metric-row,
-	.taibat-product-grid {
+	.taibat-product-grid,
+	.taibat-footer-grid {
 		grid-template-columns: 1fr;
 	}
 
+	.taibat-grid,
 	.taibat-quick-links {
 		grid-template-columns: 1fr 1fr;
 	}
 
 	.taibat-hero {
-		padding-top: 40px;
+		padding-top: 36px;
 	}
 }
 
 @media (max-width: 760px) {
-	.taibat-grid {
-		grid-template-columns: 1fr;
+	.taibat-announcement {
+		font-size: 0.8rem;
+	}
+
+	.taibat-nav {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	.taibat-links {
+		width: 100%;
+		justify-content: flex-start;
+		gap: 6px;
+	}
+
+	.taibat-menu-panel {
+		position: static;
+		min-width: 100%;
+		margin-top: 6px;
+		box-shadow: none;
 	}
 
 	.taibat-panel,
-	.taibat-newsletter {
+	.taibat-newsletter,
+	.taibat-footer-grid {
 		padding: 22px;
 	}
 
+	.taibat-home-lead {
+		min-height: 430px;
+	}
+
+	.taibat-grid,
 	.taibat-quick-links {
 		grid-template-columns: 1fr;
 	}
 
-	.taibat-links {
-		justify-content: flex-start;
+	.taibat-category-title,
+	.taibat-product-top {
+		align-items: flex-start;
+		flex-direction: column;
 	}
 }
