@@ -1,0 +1,50 @@
+{% extends "templates/web.html" %}
+
+{% block title %}الصيام في نظام الطيبات{% endblock %}
+
+{% block page_content %}
+<div class="taibat-wrap">
+	{% include "templates/includes/taibat_header.html" %}
+	<main class="taibat-page-content">
+		<section class="taibat-page-hero">
+			<div class="taibat-shell">
+				<div class="taibat-panel">
+					<span class="taibat-kicker">الصيام</span>
+					<h1 class="taibat-title">دليل الصيام الأسبوعي والشهري</h1>
+					<p class="taibat-lead">الصيام جزء من تنظيم الإيقاع الغذائي: يساعد على الانضباط وتقليل الإفراط وتحسين العلاقة مع الجوع الحقيقي.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="taibat-section">
+			<div class="taibat-shell taibat-two-grid">
+				<div class="taibat-card">
+					<h3>المواعيد الشائعة</h3>
+					<ul class="taibat-rich-list">
+						<li><strong>الصيام الأسبوعي:</strong> الاثنين والخميس.</li>
+						<li><strong>الصيام الشهري:</strong> الأيام البيض 13 و14 و15 من الشهر الهجري.</li>
+						<li>الهدف: التدرج والالتزام وليس الشدة المفاجئة.</li>
+					</ul>
+				</div>
+				<div class="taibat-card">
+					<h3>قبل وأثناء وبعد الصيام</h3>
+					<div class="taibat-timeline">
+						<div class="item"><strong>قبل الصيام:</strong> وجبة متوازنة خفيفة وتجنب الإغراق بالسكريات.</div>
+						<div class="item"><strong>أثناء الصيام:</strong> راقب النشاط واحرص على الهدوء والالتزام.</div>
+						<div class="item"><strong>بعد الصيام:</strong> ابدأ تدريجيًا بطعام مناسب من المسموحات.</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="taibat-section">
+			<div class="taibat-shell">
+				<div class="taibat-callout">
+					<strong>قاعدة مهمة:</strong> الصيام وسيلة تنظيمية وليست تحديًا قاسيًا. في الحالات الطبية الخاصة أو الأدوية المستمرة يجب الرجوع للطبيب.
+				</div>
+			</div>
+		</section>
+	</main>
+	{% include "templates/includes/taibat_footer.html" %}
+</div>
+{% endblock %}

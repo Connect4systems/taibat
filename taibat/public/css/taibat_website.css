@@ -24,6 +24,18 @@ body {
 	scroll-behavior: smooth;
 }
 
+.web-page-content,
+.page_content,
+.page-content,
+.taibat-wrap,
+.taibat-wrap main,
+.taibat-wrap section,
+.taibat-wrap article {
+	direction: rtl;
+	text-align: right;
+	unicode-bidi: plaintext;
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -273,6 +285,122 @@ a {
 	color: #53634b;
 }
 
+.taibat-rich-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: grid;
+	gap: 10px;
+}
+
+.taibat-rich-list li {
+	padding: 12px 14px;
+	border: 1px solid #d9e2d0;
+	border-radius: 12px;
+	background: #f9fcf6;
+	line-height: 1.8;
+}
+
+.taibat-rich-list li strong {
+	color: #1f3f19;
+}
+
+.taibat-chip-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-top: 12px;
+}
+
+.taibat-chip {
+	padding: 7px 11px;
+	border-radius: 999px;
+	font-size: 0.86rem;
+	font-weight: 700;
+	border: 1px solid #d3ddc8;
+	background: #f4f9ef;
+	color: #35552c;
+}
+
+.taibat-callout {
+	padding: 16px;
+	border-radius: 14px;
+	border: 1px solid #c9d8ba;
+	background: linear-gradient(140deg, #f1f8e9, #f8fbf4);
+	line-height: 1.9;
+	color: #35552b;
+}
+
+.taibat-callout.warning {
+	border-color: #e8d3a9;
+	background: linear-gradient(135deg, #fff9ef, #fdf5e6);
+	color: #6e4a13;
+}
+
+.taibat-stats {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 12px;
+	margin-top: 18px;
+}
+
+.taibat-stat {
+	border: 1px solid #d8e0cf;
+	border-radius: 14px;
+	padding: 14px;
+	background: #fcfef8;
+}
+
+.taibat-stat .num {
+	font-size: 1.35rem;
+	font-weight: 800;
+	color: #1f4a1f;
+}
+
+.taibat-stat .lbl {
+	font-size: 0.86rem;
+	color: #506248;
+}
+
+.taibat-two-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 16px;
+}
+
+.taibat-three-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 16px;
+}
+
+.taibat-source {
+	font-size: 0.9rem;
+	color: #5a6f50;
+	line-height: 1.8;
+	margin-top: 10px;
+}
+
+.taibat-source a {
+	color: #2e5f2a;
+	text-decoration: underline;
+}
+
+.taibat-timeline {
+	border-inline-start: 3px solid #c4d6b2;
+	padding-inline-start: 14px;
+	display: grid;
+	gap: 10px;
+}
+
+.taibat-timeline .item {
+	background: #fbfef8;
+	border: 1px solid #dae4d2;
+	border-radius: 12px;
+	padding: 12px;
+	line-height: 1.8;
+}
+
 .taibat-newsletter {
 	background: linear-gradient(140deg, #18381d 0%, #29562c 60%, #3d6f3c 100%);
 	color: #f8ffef;
@@ -361,7 +489,10 @@ a {
 @media (max-width: 1020px) {
 	.taibat-hero-grid,
 	.taibat-newsletter,
-	.taibat-columns {
+	.taibat-columns,
+	.taibat-two-grid,
+	.taibat-three-grid,
+	.taibat-stats {
 		grid-template-columns: 1fr;
 	}
 
