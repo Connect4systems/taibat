@@ -6,72 +6,7 @@
 <div class="taibat-wrap">
 	{% include "templates/includes/taibat_header.html" %}
 	<main class="taibat-page-content">
-		<section class="taibat-page-hero">
-			<div class="taibat-shell">
-				<div class="taibat-panel">
-					<span class="taibat-kicker">الباب الثالث</span>
-					<h1 class="taibat-title">الأطعمة الممنوعة وبدائلها</h1>
-					<p class="taibat-lead">الأصناف التالية من أكثر ما يربك الالتزام. ترتيبها هنا يسهّل القرار اليومي ويعطي بديلًا سريعًا.</p>
-				</div>
-			</div>
-		</section>
-		<section class="taibat-section">
-			<div class="taibat-shell taibat-three-grid">
-				<div class="taibat-card">
-					<h3>الألبان والجبن غير المسموح</h3>
-					<ul class="taibat-rich-list">
-						<li><strong>اللبن والزبادي</strong> بمختلف الأنواع.</li>
-						<li><strong>الجبنة البيضاء والقريش</strong> بجميع صورها.</li>
-						<li>البديل: الأنواع المتخمرة المسموحة المحددة في صفحة المسموحات.</li>
-					</ul>
-				</div>
-				<div class="taibat-card">
-					<h3>الدقيق والمخبوزات</h3>
-					<ul class="taibat-rich-list">
-						<li>الدقيق الأبيض ومشتقاته.</li>
-						<li>المخبوزات التجارية والكرواسون والرقاق والمنتجات المشابهة.</li>
-						<li>البديل: أرز، بطاطس، بطاطا، أو خيارات طبيعية مطهية.</li>
-					</ul>
-				</div>
-				<div class="taibat-card">
-					<h3>المشروبات غير المناسبة</h3>
-					<ul class="taibat-rich-list">
-						<li>المياه الغازية والمشروبات المحلاة صناعيًا.</li>
-						<li>مشروبات سريعة التحضير عالية السكر.</li>
-						<li>البديل: ماء، قهوة أو شاي أخضر بدون سكر، عصائر طبيعية مناسبة.</li>
-					</ul>
-				</div>
-				<div class="taibat-card">
-					<h3>بقوليات وخضار معينة</h3>
-					<ul class="taibat-rich-list">
-						<li>الفول، العدس، الحمص، الفاصوليا.</li>
-						<li>الملوخية والملفوف حسب المرفق.</li>
-						<li>مجموعات خضار محددة غير مناسبة ضمن النظام.</li>
-					</ul>
-				</div>
-				<div class="taibat-card">
-					<h3>سكر وحلويات مصنعة</h3>
-					<ul class="taibat-rich-list">
-						<li>الحلويات الصناعية والمربى التجارية.</li>
-						<li>المنتجات التي تعتمد على سكر مضاف ومكونات صناعية.</li>
-						<li>البديل: خيارات طبيعية محددة وبكميات منضبطة.</li>
-					</ul>
-				</div>
-				<div class="taibat-card">
-					<h3>قاعدة القرار السريع</h3>
-					<div class="taibat-timeline">
-						<div class="item"><strong>إذا كان مصنعًا:</strong> أوقفه.</div>
-						<div class="item"><strong>إذا كان مضافًا له سكر:</strong> تجنبه.</div>
-						<div class="item"><strong>إذا كان طبيعيا ومذكورًا في المسموحات:</strong> استخدمه بالاعتدال.</div>
-					</div>
-				</div>
-			</div>
-			<div class="taibat-shell" style="margin-top:16px;">
-				<div class="taibat-callout warning">
-					<strong>ملاحظة مهمة:</strong> قوائم المنع هنا مبنية على المرفق الذي أرسلته، والهدف منها تسهيل الالتزام اليومي وليس إرباك المستخدم.
-				</div>
-			</div>
-		</section>
+		{% include "templates/includes/forbidden_catalog_content.html" %}
 	</main>
 	{% include "templates/includes/taibat_footer.html" %}
 </div>

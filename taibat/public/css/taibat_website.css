@@ -627,6 +627,35 @@ a.taibat-card:hover,
 	background: linear-gradient(180deg, var(--brand), var(--accent));
 }
 
+.taibat-page-hero-grid {
+	display: grid;
+	grid-template-columns: 1.2fr 0.8fr;
+	gap: 16px;
+	align-items: stretch;
+}
+
+.taibat-page-image {
+	width: 100%;
+	min-height: 260px;
+	border-radius: var(--radius-lg);
+	object-fit: cover;
+	display: block;
+	box-shadow: var(--shadow-card);
+	border: 1px solid var(--line);
+	background: #eff8f6;
+}
+
+.taibat-card-media {
+	width: calc(100% + 44px);
+	height: 170px;
+	margin: -22px -22px 16px;
+	border-radius: 16px 16px 0 0;
+	object-fit: cover;
+	display: block;
+	background: #eff8f6;
+	border-bottom: 1px solid var(--line);
+}
+
 .taibat-page-content {
 	padding-bottom: 52px;
 }
@@ -636,6 +665,27 @@ a.taibat-card:hover,
 	color: #effffb;
 	position: relative;
 	overflow: hidden;
+}
+
+.taibat-forbidden-hero {
+	background: linear-gradient(135deg, rgba(76, 25, 19, 0.96), rgba(155, 58, 33, 0.88));
+	color: #fff7f3;
+	position: relative;
+	overflow: hidden;
+}
+
+.taibat-forbidden-hero .taibat-kicker {
+	background: rgba(255, 255, 255, 0.14);
+	border-color: rgba(255, 255, 255, 0.28);
+	color: #ffffff;
+}
+
+.taibat-forbidden-hero .taibat-title {
+	color: #fff;
+}
+
+.taibat-forbidden-hero .taibat-lead {
+	color: rgba(255, 255, 255, 0.82);
 }
 
 .taibat-allowed-hero .taibat-kicker {
@@ -729,6 +779,12 @@ a.taibat-card:hover,
 	color: #173746;
 }
 
+.taibat-count-badge.danger {
+	border-color: #f2c5b5;
+	background: #fff4ef;
+	color: #9b3a21;
+}
+
 .taibat-product-grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -810,6 +866,12 @@ a.taibat-card:hover,
 	border-color: #f2c5b5;
 }
 
+.taibat-badge.forbidden {
+	background: #ffe2d8;
+	color: #8f2f1d;
+	border-color: #f0b5a4;
+}
+
 .taibat-product-top {
 	display: flex;
 	align-items: flex-start;
@@ -866,6 +928,7 @@ a.taibat-card:hover,
 
 @media (max-width: 1020px) {
 	.taibat-hero-grid,
+	.taibat-page-hero-grid,
 	.taibat-newsletter,
 	.taibat-columns,
 	.taibat-two-grid,
